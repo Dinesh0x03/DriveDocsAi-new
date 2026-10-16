@@ -82,7 +82,7 @@ app.get('/api/auth/google/url', (_req, res) => {
 
 app.get('/api/auth/google/callback', async (req, res) => {
   console.log('========== GOOGLE CALLBACK RECEIVED ==========');
-  console.log('Query params:', req.query);
+
   
   const { code, error } = req.query;
   
@@ -110,7 +110,7 @@ app.get('/api/auth/google/callback', async (req, res) => {
       picture: user.picture || '',
     });
     const redirectUrl = `${config.frontendUrl}/auth/success?${params.toString()}`;
-    console.log('🔀 Redirecting to frontend:', redirectUrl);
+    // console.log('🔀 Redirecting to frontend:', redirectUrl);
     res.redirect(redirectUrl);
   } catch (err) {
     console.error('❌ OAuth exchange failed:', err);

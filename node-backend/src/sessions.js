@@ -1,6 +1,12 @@
 import jwt from 'jsonwebtoken';
 import { config } from './config.js';
 
+import { randomBytes } from 'crypto';   // top of sessions.js
+
+function cryptoRandom() {
+  return randomBytes(24).toString('base64url');
+}
+
 /**
  * In-memory session store.
  *   sessionId -> { email, name, picture, refreshToken, accessToken, expiryDate,

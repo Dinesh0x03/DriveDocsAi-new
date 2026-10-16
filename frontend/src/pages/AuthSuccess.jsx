@@ -8,7 +8,7 @@ export default function AuthSuccess() {
 
   useEffect(() => {
     console.log("🔐 AuthSuccess page loaded");
-    console.log("📍 Full URL:", window.location.href);
+    // console.log("📍 Full URL:", window.location.href);
     console.log("📍 Location search:", location.search);
     
     const params = new URLSearchParams(location.search);
