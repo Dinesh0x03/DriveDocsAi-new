@@ -1,0 +1,4 @@
+/* App-level layout only. Most styling is in Tailwind utilities. */
+.App {
+    width: 100%;
+}

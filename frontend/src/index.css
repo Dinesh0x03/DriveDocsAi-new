@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa; /* zinc-50 */
+    color: #09090b; /* zinc-950 */
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 5.9% 10%;
+        --radius: 0.125rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+}
+
+/* Typewriter cursor */
+.cursor-blink::after {
+    content: '▌';
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+    color: #002FA7;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Markdown styling inside AI messages */
+.md-body p { margin: 0 0 0.75rem 0; }
+.md-body p:last-child { margin-bottom: 0; }
+.md-body ul, .md-body ol { margin: 0 0 0.75rem 1.25rem; }
+.md-body li { margin-bottom: 0.25rem; }
+.md-body code {
+    font-family: 'IBM Plex Mono', monospace;
+    background: #f4f4f5;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.85em;
+    border: 1px solid #e4e4e7;
+}
+.md-body pre {
+    font-family: 'IBM Plex Mono', monospace;
+    background: #09090b;
+    color: #fafafa;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    margin: 0 0 0.75rem 0;
+}
+.md-body pre code { background: transparent; border: 0; padding: 0; color: inherit; }
+.md-body strong { font-weight: 700; }
+.md-body h1, .md-body h2, .md-body h3 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 1rem 0 0.5rem 0;
+}
+
+[data-debug-wrapper=\"true\"] {
+    display: contents !important;
+}

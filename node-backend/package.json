@@ -1,0 +1,55 @@
+{
+  "name": "drive-rag-node-backend",
+  "version": "1.0.0",
+  "description": "Google Drive RAG AI Agent (Node.js + Express)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "build": "echo 'No build step required'",
+    "lint": "echo 'No linter configured'",
+    "test": "echo 'No tests configured'"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "google-auth-library": "^10.6.2",
+    "googleapis": "^144.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "lru-cache": "^11.3.5",
+    "mammoth": "^1.12.0",
+    "openai": "^4.68.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "nodemon": "^3.0.0"
+  },
+  "keywords": [
+    "google-drive",
+    "rag",
+    "ai",
+    "openai",
+    "express",
+    "nodejs"
+  ],
+  "author": "Dinesh Linganaboina",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dinesh0x03/DriveDocsAi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dinesh0x03/DriveDocsAi/issues"
+  },
+  "homepage": "https://drivedocai-frontend.vercel.app",
+  "private": true
+}

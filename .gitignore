@@ -1,0 +1,42 @@
+# Environment variables (all levels)
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Secrets and keys
+*.key
+*.pem
+*.crt
+credentials.json
+token.json
+google-credentials.json
+
+# Local configuration
+config.local.js
+config.local.json
